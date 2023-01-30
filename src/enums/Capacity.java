@@ -7,8 +7,8 @@ public enum Capacity {
     LARGE(60, 80),
     HUGE(100, 120);
 
-    private Integer downLimit;
-    private Integer upLimit;
+    private final Integer downLimit;
+    private final Integer upLimit;
 
     Capacity(Integer downLimit, Integer upLimit) {
         this.downLimit = downLimit;

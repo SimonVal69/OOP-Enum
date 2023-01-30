@@ -1,8 +1,8 @@
 package transport;
 
 import driver.*;
-import enums.Capacity;
-import enums.VehicleType;
+import enums.*;
+import exceptions.TransportTypeException;
 import interfaces.Competing;
 
 public class Bus extends Transport<DriverD> implements Competing {
@@ -31,6 +31,11 @@ public class Bus extends Transport<DriverD> implements Competing {
         } else {
             System.out.println("Тип транспортного средства: " + vehicleType.getTypeTranslate());
         }
+    }
+
+    @Override
+    public void diagnoseVehicle() throws TransportTypeException {
+        throw new TransportTypeException("Автобусам не нужна диагностика");
     }
 
     @Override

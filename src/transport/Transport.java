@@ -1,6 +1,7 @@
 package transport;
 
 import driver.Driver;
+import exceptions.TransportTypeException;
 import utils.Utils;
 
 public abstract class Transport<T extends Driver> {
@@ -17,6 +18,7 @@ public abstract class Transport<T extends Driver> {
     }
 
     public abstract void printType();
+    public abstract void diagnoseVehicle() throws TransportTypeException;
 
     public String getBrand() {
         return brand;

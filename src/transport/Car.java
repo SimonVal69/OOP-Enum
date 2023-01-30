@@ -1,7 +1,7 @@
 package transport;
 
-import enums.CarBody;
-import enums.VehicleType;
+import enums.*;
+import exceptions.TransportTypeException;
 import interfaces.Competing;
 import driver.*;
 
@@ -31,6 +31,11 @@ public class Car extends Transport<DriverB> implements Competing {
         } else {
             System.out.println("Тип транспортного средства: " + vehicleType.getTypeTranslate());
         }
+    }
+
+    @Override
+    public void diagnoseVehicle() {
+        System.out.println("Проводим диагностику легкового автомобиля");
     }
 
     @Override

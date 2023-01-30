@@ -5,8 +5,8 @@ public enum LoadCapacity {
     N2(3.5F, 12.5F),
     N3(12.5F, null);
 
-    private Float downLimit;
-    private Float upLimit;
+    private final Float downLimit;
+    private final Float upLimit;
 
     LoadCapacity(Float downLimit, Float upLimit) {
         this.downLimit = downLimit;

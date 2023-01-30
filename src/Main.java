@@ -1,8 +1,6 @@
 import driver.*;
-import enums.Capacity;
-import enums.CarBody;
-import enums.LoadCapacity;
-import enums.VehicleType;
+import enums.*;
+import exceptions.TransportTypeException;
 import transport.*;
 
 public class Main {
@@ -71,6 +69,15 @@ public class Main {
         car1.maxSpeed();
         truck1.maxSpeed();
         bus1.maxSpeed();
+        System.out.println();
+
+        car1.diagnoseVehicle();
+        truck1.diagnoseVehicle();
+        try {
+            bus1.diagnoseVehicle();
+        } catch (TransportTypeException e) {
+            System.err.println("Автобусам не нужна диагностика");
+        }
 
     }
 

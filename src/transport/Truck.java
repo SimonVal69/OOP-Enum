@@ -1,7 +1,7 @@
 package transport;
 
-import enums.LoadCapacity;
-import enums.VehicleType;
+import enums.*;
+import exceptions.TransportTypeException;
 import interfaces.Competing;
 import driver.*;
 
@@ -31,6 +31,11 @@ public class Truck extends Transport<DriverC> implements Competing {
         } else {
             System.out.println("Тип транспортного средства: " + vehicleType.getTypeTranslate());
         }
+    }
+
+    @Override
+    public void diagnoseVehicle() {
+        System.out.println("Проводим диагностику грузовика");
     }
 
     @Override

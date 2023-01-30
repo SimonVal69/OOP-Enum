@@ -5,7 +5,7 @@ public enum VehicleType {
     BUS("автобус"),
     TRUCK("грузовик");
 
-    private String typeTranslate;
+    private final String typeTranslate;
 
     VehicleType(String typeTranslate) {
         this.typeTranslate = typeTranslate;

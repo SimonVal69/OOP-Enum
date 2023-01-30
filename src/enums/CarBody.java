@@ -11,7 +11,7 @@ public enum CarBody {
     VAN("фургон"),
     MINIVAN("минивэн");
 
-    private String carBody;
+    private final String carBody;
 
     CarBody(String carBody) {
         this.carBody = carBody;
